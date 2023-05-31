@@ -7,6 +7,10 @@ import Map from './components/Map/Map';
 
 const App =() => {
     const  [places,setPlaces] = useState([]);
+    const  [coordinates, setcoordinates ] = useState({});
+    const  [bounds, setBounds] = useState(null);
+
+
 
     useEffect(() => {
         getPlacesData()
@@ -27,7 +31,14 @@ const App =() => {
                 <List />
             </Grid>
             <Grid item xs={12} md={8}>
-                <Map />
+                <Map 
+                    setcoordinates={setcoordinates}
+                    setBounds={setBounds}
+                    coordinates ={coordinates}
+                
+                
+                />
+
             </Grid>
        </Grid>
             
