@@ -6,12 +6,9 @@ import Rating from '@material-ui/lab/';
 
 import useStyles from './styles.js';
 
-const Map = () => {
+const Map = ({setCoordinates, setBounds, coordinates}) => {
   const isMobile = useMediaQuery('(min-width:600px)');
   const classes = useStyles();
-
-  const coordinates = { lat: 0, lng: 0 };
-
   return (
     <div className={classes.mapContainer}>
       <GoogleMapReact
