@@ -8,7 +8,7 @@ import Map from './components/Map/Map';
 const App =() => {
     const  [places, setPlaces] = useState([]);
     const  [coordinates, setcoordinates ] = useState({});
-    const  [bounds, setBounds] = useState(null);
+    const  [bounds, setBounds] = useState('');
 
     useEffect(() => {
         navigator.geolocation.getCurrentPosition(({coords: {latitude,longitude}})=>{
@@ -43,6 +43,7 @@ const App =() => {
                     setcoordinates={setcoordinates}
                     setBounds={setBounds}
                     coordinates ={coordinates}
+                    places={places}
                 
                 
                 />
