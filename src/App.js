@@ -6,13 +6,12 @@ import List from './components/List/List';
 import Map from './components/Map/Map';
 
 const App =() => {
-    const  [places,setPlaces] = useState([]);
-    const  [coordinates, setcoordinates ] = useState({});
+    const  [places, setPlaces] = useState([]);
+    const  [coordinates, setcoordinates ] = useState({lat:0,lng:0});
     const  [bounds, setBounds] = useState(null);
 
-
-
     useEffect(() => {
+        console.log(coordinates,bounds);
         getPlacesData()
            .then((data) => {
               console.log(data);
